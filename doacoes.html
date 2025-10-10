@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doações - Caminho de volta</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style> body { font-family: 'Roboto', sans-serif; } </style>
+</head>
+<body>
+    <!-- Header e Nav (copie do index.html para consistência) -->
+    <header>
+        <h1>Caminho de volta</h1>
+        <p>ONG dedicada a apoiar pessoas em situação de rua.</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="voluntariado.html">Voluntariado</a></li>
+            <li><a href="doacoes.html">Doações</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Seção explicativa sobre doações -->
+        <section>
+            <h2>Como Doar</h2>
+            <p>Sua contribuição faz a diferença! Doações a partir de R$ 10,00. Aceitamos PIX, cartão e boleto.</p>
+           
+            
+        </section>
+
+        <!-- Formulário 3: Doação (complexo, com validação nativa, máscaras para CPF/Tel/CEP, API CEP) -->
+        <section>
+            <h2>Faça Sua Doação Agora</h2>
+            <form novalidate> <!-- Validação nativa HTML5 ativada -->
+                <fieldset>
+                    <legend>Dados do Doador</legend>
+                    <!-- Máscara CPF aplicada via JS -->
+                    <label for="cpfDoacao">CPF: <input type="text" id="cpfDoacao" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required title="Formato: 000.000.000-00"></label>
+                    <label for="nomeDoacao">Nome Completo: <input type="text" id="nomeDoacao" required minlength="3" maxlength="100"></label>
+                    <label for="emailDoacao">Email: <input type="email" id="emailDoacao" required></label>
+                    <label for="telefoneDoacao">Telefone: <input type="tel" id="telefoneDoacao" pattern="\$11\$ \d{5}-\d{4}" required title="Formato: (11) 99999-9999"></label>
+                </fieldset>
+                <fieldset>
+                    <legend>Endereço (Opcional, auto-preenchido via CEP)</legend>
+                    <!-- Máscara CEP e API ViaCEP via JS -->
+                    <label for="cepDoacao">CEP: <input type="text" id="cepDoacao" pattern="\d{5}-\d{3}" required title="Formato: 00000-000"></label>
+                    <label for="enderecoDoacao">Endereço: <input type="text" id="enderecoDoacao" required></label>
+                    <label for="bairroDoacao">Bairro: <input type="text" id="bairroDoacao"></label>
+                    <label for="cidadeDoacao">Cidade: <input type="text" id="cidadeDoacao"></label>
+                    <label for="ufDoacao">UF: <select id="ufDoacao" required>
+                        <option value="">Selecione</option>
+                        <option value="SP">SP</option>
+                        <!-- Adicione mais UFs -->
+                    </select></label>
+                </fieldset>
+                <fieldset>
+                    <legend>Detalhes da Doação</legend>
+                    <label for="valor">Valor (R$): <input type="number" id="valor" min="10" max="10000" step="0.01" required></label>
+                    <label for="metodo">Método de Pagamento: <select id="metodo" required>
+                        <option value="">Selecione</option>
+                        <option value="pix">PIX</option>
+                        <option value="cartao">Cartão</option>
+                        <option value="boleto">Boleto</option>
+                    </select></label>
+                    <label for="frequencia">Frequência: <input type="radio" name="frequencia" value="unica" required> Única
+                        <input type="radio" name="frequencia" value="mensal"> Mensal</label>
+                </fieldset>
+                <button type="submit">Confirmar Doação</button>
+            </form>
+            <!-- Comentário: Integre com gateway de pagamento real (ex.: PagSeguro) para produção -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Rua para Todos. Doações seguras e transparentes.</p>
+    </footer>
+
+    <!-- Scripts: Máscaras para CPF/Tel/CEP e API -->
+    <script src="js/mascaras.js"></script> <!-- Ajuste IDs no JS se necessário (ex.: cpfInput = document.getElementById('cpfDoacao')) -->
+</body>
+</html>
