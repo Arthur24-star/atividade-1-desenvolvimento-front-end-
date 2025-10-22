@@ -4,39 +4,32 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ong para ajudar pessoas em situação de rua- Caminho de volta </title>
-  
-
+  <title>Ong para ajudar pessoas em situação de rua - Caminho de Volta</title>
 </head>
 <body>
 
- 
   <!-- Cabeçalho -->
   <header>
     <h1>ONG Caminho de Volta</h1>
     <p>Dignidade, esperança e oportunidades | Fundada em 2020</p>
-     <!-- Figura principal -->
-  <figure>
-    <img src="imagens-da-ong/imagem29.png" alt="Capa da ong" width="900"  height="460">
-   
-    
-    <figcaption>Uma ong que ajuda pessoas em situação de rua</figcaption>
-  </figure>
 
+    <!-- Figura principal -->
+    <figure>
+      <img src="imagens-da-ong/imagem29.png" alt="Capa da ONG" width="900" height="460">
+      <figcaption>Uma ONG que ajuda pessoas em situação de rua</figcaption>
+    </figure>
+  </header>
 
   <!-- Menu de navegação -->
-  
-<nav>
-  <div class="menu-hamburguer" id="menu-btn">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+  <nav id="menu">
+    <!-- Botão hambúrguer (visível no mobile) -->
+    <div class="menu-hamburguer" id="btn-menu">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
 
     <ul>
-       <!-- Ícone do menu (hambúrguer) -->
-  <div class="menu-icon" id="menu-icon">☰</div>
-
       <li><a href="index.html">Início</a></li>
       <li><a href="html/sobre.html">Sobre</a></li>
       <li><a href="html/projetos.html">Projetos</a></li>
@@ -45,13 +38,12 @@
       <li><a href="html/contato.html">Contato</a></li>
     </ul>
   </nav>
-   
-  </header>
+
   <!-- Conteúdo principal -->
   <main>
     <section>
       <h2>Seja parte da mudança</h2>
-      <img src="imagens-da-ong/imagem35.jpg" alt="imagem ilustrativa" width="900">
+      <img src="imagens-da-ong/imagem35.jpg" alt="Imagem ilustrativa" width="900">
       <p>Conheça nossas ações e veja como você pode colaborar com a ONG Caminho de Volta.</p>
     </section>
 
@@ -78,23 +70,16 @@
   <footer>
     <p>&copy; 2025 Caminho de Volta — Todos os direitos reservados.</p>
   </footer>
+
+  <!-- Script do menu -->
   <script>
- 
-  const menuBtn = document.getElementById("menu-btn");
-  const nav = document.querySelector("nav");
+    const btnMenu = document.getElementById("btn-menu");
+    const nav = document.getElementById("menu");
 
-  menuBtn.addEventListener("click", () => {
-    menuBtn.classList.toggle("ativo");
-    nav.classList.toggle("ativo");
-  });
-
-</script>
-
+    btnMenu.addEventListener("click", () => {
+      nav.classList.toggle("ativo");
+    });
+  </script>
 
 </body>
-
 </html>
-
-
-
-
