@@ -82,13 +82,14 @@
   </footer>
   <script>
  
-  const menuBtn = document.getElementById("menu-btn");
-  const nav = document.querySelector("nav");
+<!-- Script do menu -->
+  <script>
+    const btnMenu = document.getElementById("btn-menu");
+    const nav = document.getElementById("menu");
 
-  menuBtn.addEventListener("click", () => {
-    menuBtn.classList.toggle("ativo");
-    nav.classList.toggle("ativo");
-  });
+    btnMenu.addEventListener("click", () => {
+      nav.classList.toggle("ativo");
+    });
 
 </script>
 
@@ -97,6 +98,7 @@
 
 </body>
 </html>
+
 
 
 
