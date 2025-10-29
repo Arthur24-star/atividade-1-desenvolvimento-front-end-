@@ -1,0 +1,333 @@
+/* =======================================================
+   🌍 ONG CAMINHO DE VOLTA — STYLE.CSS RESPONSIVO (com Design System)
+   ======================================================= */
+
+/* 🎨 Paleta e variáveis globais */
+:root {
+  /* Cores */
+  --primary-color: #243342;      /* Azul Escuro Principal */
+  --primary-medium: #3a4a5c;     /* Azul Médio */
+  --secondary-color: #d16100;    /* Laranja Destaque */
+  --accent-color: #ffb84d;       /* Laranja Claro */
+  --accent-soft: #e68a2e;        /* Laranja Suave */
+  --neutral-light: #f7f7f7;      /* Neutro Claro */
+  --neutral-medium: #cccccc;     /* Neutro Médio */
+  --neutral-dark: #333333;       /* Neutro Escuro */
+
+  /* Tipografia */
+  --font-primary: "Roboto", sans-serif;
+  --font-xs: 0.8rem;
+  --font-sm: 1rem;
+  --font-md: 1.2rem;
+  --font-lg: 1.5rem;
+  --font-xl: 2rem;
+
+  /* Espaçamentos (sistema modular 8px) */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+}
+
+/* 🌐 Reset global */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--neutral-dark);
+  background-color: var(--neutral-light);
+  line-height: 1.6;
+}
+
+/* =======================================================
+   🧭 CABEÇALHO
+   ======================================================= */
+
+header {
+  text-align: center;
+  background-color: var(--primary-color);
+  color: white;
+  padding: var(--space-4) var(--space-2);
+}
+
+header h1 {
+  font-size: var(--font-xl);
+  margin-bottom: var(--space-1);
+}
+
+header p {
+  font-size: var(--font-md);
+  color: var(--accent-color);
+}
+
+header figure {
+  margin-top: var(--space-3);
+}
+
+header img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+header figcaption {
+  font-size: var(--font-sm);
+  color: var(--accent-color);
+  margin-top: var(--space-1);
+}
+
+/* =======================================================
+   🧭 MENU DE NAVEGAÇÃO (sem botão hambúrguer)
+   ======================================================= */
+
+nav {
+  background-color: var(--secondary-color);
+  padding: var(--space-2);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: var(--space-2);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.ativo {
+  color: var(--accent-color);
+}
+
+/* =======================================================
+   📄 CONTEÚDO PRINCIPAL
+   ======================================================= */
+
+main {
+  padding: var(--space-4) var(--space-2);
+  max-width: 1200px;
+  margin: auto;
+}
+
+main section {
+  margin-bottom: var(--space-4);
+  background: white;
+  padding: var(--space-3);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+main h2 {
+  color: var(--primary-color);
+  font-size: var(--font-lg);
+  margin-bottom: var(--space-2);
+}
+
+main p {
+  margin-bottom: var(--space-2);
+  font-size: var(--font-sm);
+}
+
+main img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: var(--space-2);
+}
+
+/* Redes Sociais */
+main ul {
+  list-style: none;
+  padding: 0;
+}
+
+main ul li {
+  margin: var(--space-1) 0;
+}
+
+main ul a {
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+main ul a:hover {
+  color: var(--accent-color);
+}
+
+/* =======================================================
+   ⚙️ RODAPÉ
+   ======================================================= */
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: var(--space-3);
+  font-size: var(--font-sm);
+}
+
+/* =======================================================
+   💰 FORMULÁRIO DE DOAÇÃO E GERAIS
+   ======================================================= */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+}
+
+fieldset {
+  border: 1px solid var(--neutral-medium);
+  border-radius: 10px;
+  padding: var(--space-3);
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+legend {
+  font-weight: bold;
+  color: var(--primary-color);
+  padding: 0 var(--space-1);
+}
+
+label {
+  display: block;
+  margin-top: var(--space-2);
+  font-weight: 600;
+  color: var(--primary-medium);
+}
+
+input,
+select {
+  width: 100%;
+  padding: var(--space-2);
+  margin-top: var(--space-1);
+  border: 1px solid var(--neutral-medium);
+  border-radius: 8px;
+  font-size: var(--font-sm);
+  font-family: var(--font-primary);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--secondary-color);
+  outline: none;
+  box-shadow: 0 0 4px var(--accent-color);
+}
+
+button[type="submit"],
+.btn-doar {
+  background-color: var(--secondary-color);
+  color: white;
+  font-weight: bold;
+  padding: var(--space-2) var(--space-3);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover,
+.btn-doar:hover {
+  background-color: var(--accent-soft);
+  transform: scale(1.02);
+}
+
+.hint {
+  font-size: var(--font-xs);
+  color: var(--neutral-dark);
+  margin-top: var(--space-2);
+}
+
+/* Mensagens de erro/sucesso */
+.mensagem-form {
+  margin-top: var(--space-2);
+  padding: var(--space-2);
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.mensagem-form.sucesso {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.mensagem-form.erro {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* =======================================================
+   📱 RESPONSIVIDADE
+   ======================================================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+  nav ul {
+    flex-wrap: wrap;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+  }
+
+  main section {
+    margin: 0;
+  }
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  main {
+    display: block;
+  }
+
+  header h1 {
+    font-size: var(--font-lg);
+  }
+
+  main img {
+    border-radius: 6px;
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: var(--font-md);
+  }
+
+  header p {
+    font-size: var(--font-sm);
+  }
+
+  footer {
+    font-size: var(--font-xs);
+  }
+}

@@ -1,0 +1,49 @@
+<section class="container">
+  <h1>Voluntariado</h1>
+  <p>Faça parte de quem transforma vidas. Inscreva-se como voluntário!</p>
+
+  <!-- Imagens ilustrativas -->
+  <div class="container">
+    <img src="../imagens-da-ong/imagem32.jpg" width="600" alt="Voluntários organizando doações para pessoas em situação de rua.">
+    <img src="../imagens-da-ong/imagem33.jpg" width="600" alt="Equipe de voluntários da ONG Caminho de Volta distribuindo alimentos.">
+  </div>
+
+  <!-- Formulário -->
+  <section>
+    <h2>Junte-se a nós</h2>
+    <p>Preencha o formulário abaixo e faça parte da nossa equipe de voluntários. Oferecemos certificado e contabilizamos horas de atividade social.</p>
+
+    <article>
+      <h3>Inscreva-se como voluntário</h3>
+
+      <form id="formVoluntario" autocomplete="on">
+        <label for="nomeVoluntario">Nome completo</label>
+        <input id="nomeVoluntario" name="nome" type="text" placeholder="Seu nome completo" required>
+
+        <label for="emailVoluntario">E-mail</label>
+        <input id="emailVoluntario" name="email" type="email" placeholder="seunome@exemplo.com" required>
+
+        <label for="telefoneVoluntario">Telefone</label>
+        <input id="telefoneVoluntario" name="telefone" type="tel" placeholder="(11) 99999-9999" required>
+
+        <label for="disponibilidade">Disponibilidade</label>
+        <select id="disponibilidade" name="disponibilidade" required>
+          <option value="">Selecione</option>
+          <option value="Manhã">Manhã</option>
+          <option value="Tarde">Tarde</option>
+          <option value="Noite">Noite</option>
+        </select>
+
+        <button type="submit" class="btn-doar">Enviar Inscrição</button>
+      </form>
+
+      <p class="hint">Suas informações são confidenciais e usadas apenas para contato interno da ONG.</p>
+    </article>
+  </section>
+
+  <!-- Histórico de voluntários -->
+  <section>
+    <h2>Voluntários Cadastrados</h2>
+    <div id="lista-voluntarios"></div>
+  </section>
+</section>
