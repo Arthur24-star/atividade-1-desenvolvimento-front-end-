@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Voluntariado — Caminho de Volta</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <meta name="description" content="Como ser voluntário na Caminho de Volta">
+</head>
+
+<body>
+  <!-- Cabeçalho -->
+  <header class="site-header">
+    <div class="container">
+      <h1>Voluntariado</h1>
+      <p>Seja parte da transformação — junte-se à nossa rede de solidariedade!</p>
+    </div>
+  </header>
+
+  <!-- Menu de navegação -->
+  <nav id="menu">
+    <!-- Botão hambúrguer -->
+    <div class="menu-hamburguer" id="btn-menu">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <ul>
+      <li><a href="../index.html">Início</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="projetos.html">Projetos</a></li>
+      <li><a href="voluntariado.html" class="ativo">Voluntariado</a></li>
+      <li><a href="doacoes.html">Doações</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- Imagens -->
+  <section class="container">
+    <img src="../imagens-da-ong/imagem32.jpg" alt="Voluntários organizando doações para pessoas em situação de rua.">
+    <img src="../imagens-da-ong/imagem33.jpg"  alt="Equipe de voluntários da ONG Caminho de Volta distribuindo alimentos.">
+  </section>
+
+  <!-- Conteúdo principal -->
+  <main class="container">
+    <section>
+      <h2>Junte-se a nós</h2>
+      <p>Faça parte da ONG Caminho de Volta e contribua com seu tempo, talento e coração. Nossos voluntários atuam em diversas frentes — desde a distribuição de alimentos até a organização de eventos e campanhas sociais.</p>
+
+      <article>
+        <h3>Inscreva-se como voluntário</h3>
+        <form action="/submit-voluntario" method="post">
+          <label for="nome">Nome completo</label>
+          <input id="nome" name="nome" type="text" required>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+
+          <label for="disponibilidade">Disponibilidade</label>
+          <select id="disponibilidade" name="disponibilidade" required>
+            <option value="">Selecione</option>
+            <option value="manha">Manhã</option>
+            <option value="tarde">Tarde</option>
+            <option value="noite">Noite</option>
+          </select>
+
+          <button type="submit" class="btn">Enviar</button>
+        </form>
+      </article>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Caminho de Volta — Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Script do menu -->
+  <script src="../script.js"></script>
+</body>
+</html>
+
