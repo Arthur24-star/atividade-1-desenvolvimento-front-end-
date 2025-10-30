@@ -1,5 +1,5 @@
 // =========================
-// CAMINHO DE VOLTA — SCRIPT PRINCIPAL (SPA corrigido)
+// CAMINHO DE VOLTA — SCRIPT PRINCIPAL (SPA corrigido para GitHub Pages)
 // =========================
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -18,12 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
         carregarPaginaSPA(url);
         window.history.pushState({}, "", `#${url}`);
 
+        // marca o link ativo
         linksSPA.forEach(l => l.classList.remove("ativo"));
         link.classList.add("ativo");
       });
     });
 
-    // 🔹 Carregar página inicial automaticamente
+    // 🔹 Carregar página inicial automaticamente (com fallback)
     const hash = window.location.hash.replace("#", "") || "inicio.html";
     carregarPaginaSPA(hash);
   }
@@ -61,7 +62,7 @@ function removerMensagem(elemento) {
 // 🧩 CARREGAMENTO DAS PÁGINAS (SPA)
 // ===============================
 function carregarPaginaSPA(url) {
-  fetch(`../paginas/${url}`)
+  fetch(`paginas/${url}`) // 🔥 caminho corrigido
     .then(response => {
       if (!response.ok) throw new Error("Erro ao carregar página");
       return response.text();
